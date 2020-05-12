@@ -139,16 +139,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Maps.c" />
+    <ClCompile Include="Players.c" />
     <ClCompile Include="Source.c" />
     <ClCompile Include="Windows.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Maps.h" />
+    <ClInclude Include="Players.h" />
     <ClInclude Include="Windows.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="map1.txt" />
     <Text Include="Menu.txt" />
+    <Text Include="player1.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

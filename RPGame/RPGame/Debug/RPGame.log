@@ -1,4 +1,11 @@
-﻿  Source.c
-  Windows.c
+﻿  Maps.c
+C:\Users\Balint\Documents\GitHub\RPGame\RP-Game\RPGame\RPGame\Players.h(18,9): error C2371: 'Create': redefinition; different basic types
+C:\Users\Balint\Documents\GitHub\RPGame\RP-Game\RPGame\RPGame\Maps.h(18): message : see declaration of 'Create'
+  Players.c
+C:\Users\Balint\Documents\GitHub\RPGame\RP-Game\RPGame\RPGame\Maps.h(18,6): error C2371: 'Create': redefinition; different basic types
+C:\Users\Balint\Documents\GitHub\RPGame\RP-Game\RPGame\RPGame\Players.h(18): message : see declaration of 'Create'
+  Source.c
+C:\Users\Balint\Documents\GitHub\RPGame\RP-Game\RPGame\RPGame\Players.h(18,9): error C2371: 'Create': redefinition; different basic types
+C:\Users\Balint\Documents\GitHub\RPGame\RP-Game\RPGame\RPGame\Maps.h(18): message : see declaration of 'Create'
+C:\Users\Balint\Documents\GitHub\RPGame\RP-Game\RPGame\RPGame\Source.c(17,33): warning C4133: '=': incompatible types - from 'Map *' to 'Player *'
   Generating Code...
-  RPGame.vcxproj -> C:\Users\Balint\source\repos\RPGame\Debug\RPGame.exe

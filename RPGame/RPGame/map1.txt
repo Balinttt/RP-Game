@@ -1,4 +1,11 @@
-1 4 3
-k d j f
-f o l t
-m n c h
+1 10 10
+3333333333
+3oooooooo3
+3oooooooo3
+3oooooooo3
+3oooooooo3
+3oooooooo3
+3oooooooo3
+3oooooooo3
+3oooooooo3
+3333333333

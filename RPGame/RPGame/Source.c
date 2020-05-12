@@ -6,11 +6,16 @@
 #include <stdlib.h>
 #include"Windows.h"
 #include"Maps.h"
+#include "Players.h"
 
 int main() {
 	Map* map1;
 	map1 = Create("map1.txt");
 	DrawMenu("Menu.txt");
+	DrawMap(map1);
+	Player* player1;
+	player1 = Create("player1.txt");
+	//SpawnPlayer(map1, player1);
 	DrawMap(map1);
 	/*int option=0;
 	printf("Your option:");
