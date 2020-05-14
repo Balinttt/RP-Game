@@ -151,6 +151,7 @@
   <ItemGroup>
     <Text Include="map1.txt" />
     <Text Include="Menu.txt" />
+    <Text Include="menumap.txt" />
     <Text Include="player1.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

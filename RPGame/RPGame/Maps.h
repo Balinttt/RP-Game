@@ -7,6 +7,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+#include "Players.h"
 
 typedef struct Map {
 	char** cord;
@@ -15,7 +17,7 @@ typedef struct Map {
 	int nr;
 }Map;
 
-Map* Create(const char* fileName);
+Map* CreateMap(const char* fileName);
 Map* DrawMap(Map* map);
 
 

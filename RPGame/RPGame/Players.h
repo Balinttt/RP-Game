@@ -7,15 +7,24 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include"Maps.h"
 
 typedef struct Player {
 	int posx;
 	int posy;
 	int level;
 	int hp;
+	char standingOn;
 }Player;
 
-Player* Create(const char* fileName);
+Player* CreatePlayer(const char* fileName);
+Player* SpawnPlayer(Map* map, Player* player);
+
+Player* MoveRight(Map* map, Player* player);
+Player* MoveLeft(Map* map, Player* player);
+Player* MoveUp(Map* map, Player* player);
+Player* MoveDown(Map* map, Player* player);
+Player* MovePlayer(Map* map, Player* player);
 
 
 

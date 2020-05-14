@@ -49,5 +49,8 @@
     <Text Include="player1.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="menumap.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

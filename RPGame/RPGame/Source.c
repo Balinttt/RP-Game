@@ -10,21 +10,63 @@
 
 int main() {
 	Map* map1;
-	map1 = Create("map1.txt");
-	DrawMenu("Menu.txt");
-	DrawMap(map1);
-	Player* player1;
-	player1 = Create("player1.txt");
-	//SpawnPlayer(map1, player1);
-	DrawMap(map1);
-	/*int option=0;
-	printf("Your option:");
-	scanf("%i", option);
-	switch(option) {
-	case 1:		
-		DrawMap(map1);
-		break;
-	}*/
+	map1 = CreateMap("map1.txt");
 
+	Map* menumap;
+	menumap = CreateMap("menumap.txt");
+
+	Player* player1;
+	player1 = CreatePlayer("player1.txt");
+
+	DrawMenu("Menu.txt");
+	getch();
+
+	system("cls");
+	SpawnPlayer(menumap, player1);
+	DrawMap(menumap);
+	MovePlayer(menumap, player1);
+	
+	
+	
+	/*SpawnPlayer(map1, player1);
+	DrawMap(map1);
+	MovePlayer(map1, player1);*/
+
+
+
+
+
+	/*char option = '1';	
+		while (option != '0') {
+			option = getch();
+
+			switch ((char)option) {
+			case 'a':
+				system("cls");
+				MoveLeft(map1, player1);
+				SpawnPlayer(map1, player1);
+				DrawMap(map1);
+				break;
+			case 'd':
+				system("cls");
+				MoveRight(map1, player1);
+				SpawnPlayer(map1, player1);
+				DrawMap(map1);
+				break;
+			case 'w':
+				system("cls");
+				MoveUp(map1, player1);
+				SpawnPlayer(map1, player1);
+				DrawMap(map1);
+				break;
+			case 's':
+				system("cls");
+				MoveDown(map1, player1);
+				SpawnPlayer(map1, player1);
+				DrawMap(map1);
+				break;
+			}
+			
+		}*/
 	return 0;
 }

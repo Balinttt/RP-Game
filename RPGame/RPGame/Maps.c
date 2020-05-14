@@ -1,7 +1,9 @@
 #include "Maps.h"
 #include "Players.h"
+#include <stdlib.h>
+#include <stdio.h>
 
-Map* Create(const char* fileName) {
+Map* CreateMap(const char* fileName) {
 	Map* new = (Map*)calloc(1, sizeof(Map));
 	if (!new) {
 		printf("Sikertelen lefoglalas.");
@@ -13,12 +15,17 @@ Map* Create(const char* fileName) {
 	fscanf(file, "%i", &new->height);
 
 	new->cord = (char**)(calloc(new->height, sizeof(char*)));
-	//ellenorzes
+	if (!new->cord) {
+		printf("Sikertelen lefoglalas.");
+		exit(1);
+	}
 	for (int i = 0; i < new->width; ++i) {
 		new->cord[i] = (char*)(calloc(new->width, sizeof(char)));
+		if (!new->cord[i]) {
+			printf("Sikertelen lefoglalas.");
+			exit(1);
+		}
 	}
-	//ellenorzes
-
 	char character;
 	fscanf(file, "%c", &character);
 	for (int i = 0; i < new->height; ++i) {
@@ -35,9 +42,20 @@ Map* Create(const char* fileName) {
 Map* DrawMap(Map* map) {
 	for (int i = 0; i < map->height; ++i) {
 		for (int j = 0; j < map->width; ++j) {
-			printf("%c",map->cord[i][j]);
+			if (map->cord[i][j] == '3') {
+				printf("-");
+			}
+			 else if (map->cord[i][j] == '2') {
+				printf("|");
+			}
+			else if (map->cord[i][j] == 'o') {
+				printf(" ");
+			}
+			else if (map->cord[i][j] == 'P') {
+				printf("X");
+			}
+			else { printf("%c", map->cord[i][j]); }
 		}
 		printf("\n");
 	}
 }
-
