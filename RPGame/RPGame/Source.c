@@ -4,8 +4,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include"Windows.h"
-#include"Maps.h"
+#include "Windows.h"
+#include "Maps.h"
 #include "Players.h"
 
 int main() {
@@ -14,6 +14,8 @@ int main() {
 
 	Map* menumap;
 	menumap = CreateMap("menumap.txt");
+	/*Gate* gate1;
+	gate1 = CreateGate(menumap, 2, 25);*/
 
 	Player* player1;
 	player1 = CreatePlayer("player1.txt");
